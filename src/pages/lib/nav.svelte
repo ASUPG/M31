@@ -1,23 +1,26 @@
 <script>
     import Icon from "./moreicon.svelte"
+    export const name = "AndromedaDB"
 </script>
-<nav class="navbar">
-    <h1 class="brandlabel">Cosmic Horizon</h1>
-    <ul class="links">
-        <li class="link"><a href="/">Home</a></li>
-        <li class="link"><a href="/docs/">Docs</a></li>
-        <li class="link"><a href="/about">About Us</a></li>
-        <li class="link"><a href="/contact">Contact US</a></li>
-    </ul>
-    <div class="icon">
-        <button type="button" class="moreicon">
-            <Icon />
-        </button>
-        <a href="https://github.com/TheUtkarsh8939/M31DB">
-            <img class="github" src="github.svg" alt="Github">
-        </a>
-    </div>
-</nav>
+<div class="nav-wrapper">
+    <nav class="navbar">
+        <h1 class="brandlabel">{name}</h1>
+        <ul class="links">
+            <li class="link"><a href="/">Home</a></li>
+            <li class="link"><a href="/docs/">Docs</a></li>
+            <li class="link"><a href="/about">About Us</a></li>
+            <li class="link"><a href="/contact">Contact US</a></li>
+        </ul>
+        <div class="icon">
+            <button type="button" class="moreicon">
+                <Icon />
+            </button>
+            <a href="https://github.com/TheUtkarsh8939/M31DB">
+                <img class="github" src="github.svg" alt="Github">
+            </a>
+        </div>
+    </nav>
+</div>
 <style lang="scss">
     @mixin flex-align-center {
         display: flex;
@@ -35,14 +38,17 @@
         font-family: sans-serif;
         background-color: var(--mainbackground);
         color: var(--font-color);
-        border-bottom: 1px solid gray;
         position: fixed;
-        box-shadow: 5px 5px 5px black, 10px 10px 10px #020023;
         .brandlabel {
             margin-left: 30px;
             font-size: 6vw;
             @include flex-align-center();
         }
+    }
+    .nav-wrapper {
+        width:100%;
+        height:127.5px;
+        background-image: linear-gradient(to right, #46ea00, #0026ff);
     }
     .icon{
         @include flex-align-center();

@@ -1,5 +1,5 @@
 ---
-import NavBar from "./lib/nav.astro";
+import NavBar from "./lib/nav.svelte";
 ---
 
 <html lang="en">
@@ -126,7 +126,7 @@ import NavBar from "./lib/nav.astro";
     </style>
   </head>
   <body>
-    <NavBar />
+    <NavBar client:load/>
     <main>
       <h1 class="head">AndromedaDB</h1>
       <h3 class="moto"><b>The Database of Your Dreams</b></h3>

@@ -1,5 +1,6 @@
 ---
 import NavBar from "./lib/nav.svelte";
+import Sdk from "./lib/sdks.svelte";
 ---
 
 <html lang="en">
@@ -104,34 +105,68 @@ import NavBar from "./lib/nav.svelte";
       }
       .download {
         width: 150px;
-        height: 50px;
+        height: 96%;
         font-size: 20px;
         background-color: var(--secbackground);
         color: var(--font-color);
         border: 0;
-		box-shadow: none;
+        box-shadow: none;
       }
       .download:hover {
         cursor: pointer;
       }
-	  .button-wrapper{
-		height: 52px;
-		width: 152px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: linear-gradient(45deg, lime, blue);
-	  }
-      //   Animations
+      .button-wrapper {
+        height: 52px;
+        width: 152px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(45deg, lime, blue);
+      }
+      .sdks {
+        margin-top: 50px;
+        width: 570px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .annoying-wrappers {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 100%;
+      }
+      // Media Queries
     </style>
   </head>
   <body>
-    <NavBar client:load/>
+    <NavBar client:load />
     <main>
       <h1 class="head">AndromedaDB</h1>
       <h3 class="moto"><b>The Database of Your Dreams</b></h3>
       <div class="button-wrapper">
-        <button class="download">Download Now</button>
+        <button class="download" type="button">Download Now</button>
+      </div>
+      <div class="sdks">
+        <h2>Supported SDKS</h2>
+        <div class="annoying-wrappers">
+          <Sdk
+            status="available"
+            sdkname="Server"
+            sdklogo="https://upload.wikimedia.org/wikipedia/commons/b/bb/Gorilla-server.svg"
+          />
+          <Sdk
+            status="working"
+            sdkname="Server"
+            sdklogo="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg"
+          />
+          <Sdk
+            status="not-available"
+            sdkname="Server"
+            sdklogo="https://upload.wikimedia.org/wikipedia/commons/b/bb/Gorilla-server.svg"
+          />
+        </div>
       </div>
     </main>
   </body>

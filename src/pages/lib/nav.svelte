@@ -1,6 +1,6 @@
 <script>
     import Icon from "./moreicon.svelte"
-    export const name = "AndromedaDB"
+    export let name
     let dropcount = 0
     function dropdown(){
           dropcount+=1
@@ -127,7 +127,7 @@
         position: absolute;
     }
     /*Responsiveness */
-    @media only screen and (max-width: 772px) {
+    @media only screen and (max-width: 923.23px) {
         .links{
             display: none;
         }

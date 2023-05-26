@@ -1,0 +1,81 @@
+---
+import Sdk from "./sdks.svelte";
+---
+
+<style>
+  .sdks {
+    margin-top: 50px;
+    width: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .annoying-wrappers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    row-gap: 10px;
+  }
+</style>
+<div class="sdks">
+  <h2>Supported SDKS</h2>
+  <div class="annoying-wrappers">
+    <Sdk
+      status="available"
+      sdkname="Server"
+      sdklogo="https://upload.wikimedia.org/wikipedia/commons/b/bb/Gorilla-server.svg"
+    />
+    <Sdk
+      status="working"
+      sdkname="Golang"
+      sdklogo="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg"
+    />
+    <Sdk
+      status="working"
+      sdkname="JavaScript"
+      sdklogo="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+    />
+    <Sdk
+      status="working"
+      sdkname="Python"
+      sdklogo="https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg"
+    />
+    <Sdk
+      status="working"
+      sdkname="PHP"
+      sdklogo="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
+    />
+    <Sdk
+      status="working"
+      sdkname="JVM / Java"
+      sdklogo="https://static.vecteezy.com/system/resources/previews/022/100/686/non_2x/java-logo-transparent-free-png.png"
+    />
+    <Sdk status="working" sdkname="Swift" sdklogo="swift.png" />
+    <Sdk
+      status="not-available"
+      sdkname="C / C++"
+      sdklogo="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+    />
+    <Sdk
+      status="not-available"
+      sdkname="Rust"
+      sdklogo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/1280px-Rustacean-orig-noshadow.svg.png"
+    />
+    <Sdk
+      status="not-available"
+      sdkname="Elixir"
+      sdklogo="https://www.vectorlogo.zone/logos/elixir-lang/elixir-lang-icon.svg"
+    />
+    <Sdk
+      status="not-available"
+      sdkname="Dart"
+      sdklogo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Dart-logo-icon.svg/167px-Dart-logo-icon.svg.png?20220708094810"
+    />
+    <Sdk
+      status="not-available"
+      sdkname="Julia"
+      sdklogo="https://avatars.githubusercontent.com/u/743164?s=280&v=4"
+    />
+  </div>
+</div>

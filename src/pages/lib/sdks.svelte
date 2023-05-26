@@ -37,9 +37,10 @@
         margin: 0;
         border-radius: 20px;
         img{
-            aspect-ratio: 1/1;;
-            width: 40px;
-            margin:5px;
+            max-width: 40px;
+            margin:0px;
+            margin-left: 5px !important;
+            border-radius: 5px;
         }
         span{
             width:100%;
@@ -68,6 +69,6 @@
         background-image: linear-gradient(45deg, #0869f9, blue);
     }
     .not-available{
-        background-image: linear-gradient(45deg, #fdb706, red);
+        background-image: linear-gradient(45deg, #fd6506, red);
     }
 </style>

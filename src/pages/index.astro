@@ -2,6 +2,7 @@
 import NavBar from "./lib/nav.svelte";
 let name = "AndromedaDB";
 import Sdk from "./lib/sdkall.astro"
+import Featurelist from "./lib/featurelist.astro"
 ---
 
 <html lang="en">
@@ -137,6 +138,7 @@ import Sdk from "./lib/sdkall.astro"
       <div class="button-wrapper">
         <button class="download" type="button">Download Now</button>
       </div>
+      <Featurelist />
       <Sdk />
     </main>
   </body>

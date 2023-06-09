@@ -1,8 +1,9 @@
 ---
-import NavBar from "./lib/nav.svelte";
-let name = "AndromedaDB";
-import Sdk from "./lib/sdkall.astro"
-import Featurelist from "./lib/featurelist.astro"
+  import NavBar from "./lib/nav.svelte";
+  let name = "M31DB";
+  import Sdk from "./lib/sdkall.astro"
+  import Featurelist from "./lib/featurelist.svelte"
+  import "./global.scss"
 ---
 
 <html lang="en">
@@ -11,75 +12,7 @@ import Featurelist from "./lib/featurelist.astro"
 
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>AndromedaDB</title>
-    <style is:global lang="scss">
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-      :root {
-        --font-color: white;
-        --mainbackground: #01000e;
-        --secbackground: #000006;
-        --animation-curve: cubic-bezier(0.97, 1.09, 0.41, 0.67);
-      }
-      html,
-      body {
-        height: auto;
-        width: 100vw;
-        overflow-x: hidden;
-        margin: 0;
-        background-color: var(--secbackground);
-        font-family: "Poppins", sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: var(--font-color);
-      }
-      *::-webkit-scrollbar-track {
-        width: 10px;
-        background-color: transparent;
-        box-shadow: outset 10px 10px 10px 12px lightblue;
-      }
-      *::-webkit-scrollbar {
-        width: 5px;
-      }
-      *::-webkit-scrollbar-thumb {
-        background-color: transparentize(white, 0.45);
-        background-clip: content-box;
-      }
-      *::-moz-scrollbar-track {
-        width: 10px;
-        background-color: transparent;
-        box-shadow: outset 10px 10px 10px 12px lightblue;
-      }
-      *::-moz-scrollbar {
-        width: 5px;
-      }
-      *::-moz-scrollbar-thumb {
-        background-color: transparentize(white, 0.45);
-        background-clip: content-box;
-      }
-      main {
-        margin-top: 150px;
-        font-family: "Poppins", sans-serif;
-        display: flex;
-        align-items: center;
-        width: 100vw;
-        margin-left: 0;
-        margin-right: 0;
-        height: 100vh;
-        flex-direction: column;
-      }
-      /*Animations*/
-      @keyframes load {
-        from {
-          opacity: 0;
-          transform: translateX(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0px);
-        }
-      }
-    </style>
+    <title>{name}</title>
     <style lang="scss">
       main {
         .head {
@@ -133,12 +66,12 @@ import Featurelist from "./lib/featurelist.astro"
   <body>
     <NavBar name={name} client:load />
     <main>
-      <h1 class="head">AndromedaDB</h1>
+      <h1 class="head">{name}</h1>
       <h3 class="moto"><b>The Database of Your Dreams</b></h3>
       <div class="button-wrapper">
         <button class="download" type="button">Download Now</button>
       </div>
-      <Featurelist />
+      <Featurelist name={name}/>
       <Sdk />
     </main>
   </body>

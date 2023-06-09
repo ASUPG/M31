@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+:root {
+  --font-color: white;
+  --mainbackground: #01000e;
+  --secbackground: #000006;
+  --animation-curve: cubic-bezier(0.97, 1.09, 0.41, 0.67);
+}
+html,
+body {
+  height: auto;
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: var(--secbackground);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--font-color);
+}
+*::-webkit-scrollbar-track {
+  width: 10px;
+  background-color: transparent;
+  box-shadow: outset 10px 10px 10px 12px lightblue;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: transparentize(white, 0.45);
+  background-clip: content-box;
+}
+*::-moz-scrollbar-track {
+  width: 10px;
+  background-color: transparent;
+  box-shadow: outset 10px 10px 10px 12px lightblue;
+}
+*::-moz-scrollbar {
+  width: 5px;
+}
+*::-moz-scrollbar-thumb {
+  background-color: transparentize(white, 0.45);
+  background-clip: content-box;
+}
+main {
+  margin-top: 150px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+  height: 100vh;
+  flex-direction: column;
+}
+/*Animations*/
+@keyframes load {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

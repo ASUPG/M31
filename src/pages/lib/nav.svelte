@@ -48,6 +48,7 @@
 </sidebar>
 
 <style lang="scss">
+
   @mixin flex-align-center {
     display: flex;
     align-items: center;

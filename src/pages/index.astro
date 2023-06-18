@@ -1,9 +1,10 @@
 ---
-  import NavBar from "./lib/nav.svelte";
-  let name = "M31DB";
-  import Sdk from "./lib/sdkall.astro"
-  import Featurelist from "./lib/featurelist.svelte"
-  import "./global.scss"
+import NavBar from "./lib/nav.svelte";
+let name = "M31DB";
+import Sdk from "./lib/sdkall.astro";
+import Featurelist from "./lib/featurelist.svelte";
+import "./global.scss";
+import M31DbIs from "./lib/heading.svelte"
 ---
 
 <html lang="en">
@@ -15,27 +16,12 @@
     <title>{name}</title>
     <style lang="scss">
       main {
-        .head {
-          width: 100%;
-          height: 55px;
-          display: flex;
-          font-size: 8vw;
-          justify-content: center;
-          color: var(--font-color) !important;
-          color: white;
-          animation: load 1s var(--animation-curve);
-        }
         .moto {
           display: flex;
           justify-content: center;
           width: 100%;
           animation: load 2s var(--animation-curve);
           color: gray;
-        }
-      }
-      @media only screen and (min-width: 627px) {
-        .head {
-          font-size: 50.16px !important;
         }
       }
       .download {
@@ -60,18 +46,22 @@
         padding: 2px;
         background: linear-gradient(45deg, lime, blue);
       }
+      body {
+        width: 100vw I !important;
+        height: 100vh !important;
+      }
       // Media Queries
     </style>
   </head>
   <body>
     <NavBar name={name} client:load />
     <main>
-      <h1 class="head">{name}</h1>
+      <M31DbIs name={name} />
       <h3 class="moto"><b>The Database of Your Dreams</b></h3>
       <div class="button-wrapper">
         <button class="download" type="button">Download Now</button>
       </div>
-      <Featurelist name={name}/>
+      <Featurelist name={name} />
       <Sdk />
     </main>
   </body>

@@ -1,0 +1,26 @@
+---
+import NavBar from "./../lib/nav.svelte"
+import "./../global.scss"
+import License from "./../lib/licensing.md"
+let name = "M31DB"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{name} - Contribution Guidelines</title>
+    <style>
+        main{
+            width:80%
+        }
+    </style>
+</head>
+<body>
+    <NavBar name={name} client:load />
+    <main>
+        <h1>{name} - License</h1>
+        <License />
+    </main>
+</body>
+</html>
